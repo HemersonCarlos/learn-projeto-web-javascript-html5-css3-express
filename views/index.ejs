@@ -2,10 +2,19 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <%- include('imports'); -%>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <%- include('navbar'); -%>
+  
+    <div class="container">
+      <div class="row">
+        <% posts.forEach((post) => { %>
+          <%- include('post_card', { post: post }); -%>
+        <% }); %>
+      </div>
+    </div>
+
+
   </body>
 </html>
