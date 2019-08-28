@@ -1,0 +1,87 @@
+body
+{
+    background: url(../images/body.jpg);
+    background-position: center center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header
+{
+    background: url(../images/imagem_header.jpg);
+    margin-bottom: 40px;
+}
+
+footer
+{
+    margin-top: 20px;
+    background:  rgb(0, 0, 0, 0.35);
+    text-align: center;
+    color: white;
+}
+
+#personalizacao
+{
+    margin-left: 520px;
+}
+
+.card
+{
+    margin-top: 40px;
+    margin-left: 65px;
+    margin-bottom: 40px;
+}
+
+.post-detail img
+{
+    width: 400px;
+    height: 400px;
+    border-radius: 8%;
+}
+
+.post-detail h1
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: black;
+    text-align: center;
+}
+
+.media > img
+{
+    width: 150px;
+    height: 150px;
+}
+
+.media
+{
+    color: black;
+}
+
+a:link
+{
+    text-decoration: none;
+}
+
+.list
+{
+    margin-bottom: 10px;
+}
+
+.list-group-item
+{
+    margin-bottom: 10px;
+}
+
+.list-group-item:hover
+{
+    background:	#B0C4DE;
+}
+
+.my-3
+{
+    text-align: center;
+}
+
+.post-estilo
+{
+    background: rgb(139, 0, 139, 0.20);
+}

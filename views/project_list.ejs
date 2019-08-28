@@ -1,0 +1,15 @@
+<li class="list-group-item  rounded">
+    <a href="/project/<%= project.id %>">
+        <div class="media"><img src="<%= `/images/${project.image}`%>" class="align-self-start mr3 rounded">
+            <div class="media-body ml-2">
+                <h3>
+                    <%= project.name %>
+                </h3>
+
+                <p>
+                    <%= project.description %>
+                </p>
+            </div>
+        </div>
+    </a>
+</li>

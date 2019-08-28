@@ -1,12 +1,12 @@
 <div class="card" style="width: 18rem;">
-        <img src="<%= `/images/${post.image}` %>" class="card-img-top" alt="...">
+        <img src="<%= `/images/${post.image}` %>" class="card-img-top" alt="Linguagens">
         <div class="card-body">
-          <h5 class="card-title">
+          <h5 class="card-title text-center">
             <%= post.title %>
           </h5>
-          <p class="card-text">
-              <%= post.description %>
+          <p class="card-text text-justify">
+            <%= post.description %>
           </p>
-          <a href="#" class="btn btn-primary">Ler mais</a>
+          <a href="/posts/<%= post.id %>" class="btn btn-primary">Ler mais</a>
         </div>
 </div>

@@ -1,0 +1,12 @@
+<div class="card" style="width: 18rem;">
+    <img src="<%= `/images/${project.image}` %>" class="card-img-top" alt="Projects">
+    <div class="card-body">
+      <h5 class="card-title text-center">
+        <%= project.name %>
+      </h5>
+      <p class="card-text text-justify">
+        <%= project.description %>
+      </p>
+      <a href="/project/<%= project.id %>" class="btn btn-primary">Ler mais</a>
+    </div>
+</div>
