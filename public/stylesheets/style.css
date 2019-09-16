@@ -85,3 +85,14 @@ a:link
 {
     background: rgb(139, 0, 139, 0.20);
 }
+
+.testimonials p
+{
+    margin-bottom: 40px;
+}
+
+.testimonials h2
+{
+    margin-top: 20px;
+    display: block;
+}

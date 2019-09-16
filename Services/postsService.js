@@ -1,6 +1,6 @@
-var getPosts = function()
+var getPosts = function() // Variável que ajuda chamar a função com todos os posts...
 {
-    var posts = 
+    var posts = // Armazena todos os posts em uma lista que é um array...
     [
         {
             id: 1,
@@ -30,7 +30,7 @@ var getPosts = function()
     return posts;
 }
 
-module.exports = 
+module.exports = // Funcção que o resto do sistema pode acessar e olhar essa variável....
 {
-    getPosts: getPosts
+    getPosts: getPosts // Primeiro e referenciado fora (getPosts) e ou outro e referenciado dentro (getPosts)....
 }

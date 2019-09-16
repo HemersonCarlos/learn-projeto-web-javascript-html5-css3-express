@@ -1,14 +1,15 @@
 var express = require('express');
 var router = express.Router();
 var postsService = require('../services/postsService');
-var projectsService = require('../services/projectsService');
+var projectsService = require('../services/projectsService'); // Como se fosse o include do JavaScript...
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', function(req, res, next) // Rotas da aplicação web... configuração das rotas e respostas ao chamado da navegação web...
+{
   var posts = postsService.getPosts();
   var projects = projectsService.getProjects();
     
-  res.render('index', {title: 'Blog', posts: posts, projects: projects });
+  res.render('index', {title: 'Blog', posts: posts, projects: projects }); // Passa Arquivo de view e recheia com os outros dados...
 });
 
 router.get('/posts', function(req, res, next)
