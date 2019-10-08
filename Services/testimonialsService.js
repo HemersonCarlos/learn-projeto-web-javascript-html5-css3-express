@@ -1,31 +1,39 @@
-var getTestimonials = function()
-{
-    var testimonials = 
-    [
-        {
-            id: 1,
-            name: 'Fulano',
-            company: 'Texas Park System',
-            title: 'Cata da TI',
-            testimony: 'Eu gosto muito de Linguagens de programação'
-        },
+var fs = require('fs');
 
-        {
-            id: 2,
-            name: 'Joaozinho',
-            company: 'Userss Technical Park',
-            title: 'Cara da Administração',
-            testimony: 'EU gosto muito de javascript e java'
-        }
-    ];
+var testimonialsFilePath = 'db/testimonials.json';
+
+var loadFileTestimonials = function()
+{
+    var fileData = fs.readFileSync(testimonialsFilePath);
+
+    var testimonials = JSON.parse(fileData);
 
     return testimonials;
 }
 
+var saveFileTestimonials = function(testimonials)
+{
+    var data = JSON.stringify(testimonials);
+    fs.writeFileSync(testimonialsFilePath, data, 'utf8');
+}
 
+var getTestimonials = function()
+{
+    var testimonials = loadFileTestimonials();
+
+    return testimonials;
+}
+
+var saveTestimony = function(newTestimony)
+{
+    var testimonials = loadFileTestimonials();
+    testimonials.push(newTestimony);
+    saveFileTestimonials(testimonials);
+}
 
 // Exportar a função no module...
 module.exports = 
 {// Referencia fora : nome do arquivo interno
-    getTestimonials: getTestimonials
+    getTestimonials: getTestimonials,
+    saveTestimony: saveTestimony
 }

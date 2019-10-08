@@ -9,10 +9,12 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan'); 
 
 
-
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var testimonialsRouter = require('./routes/testimonials');
+var adminPostsRouter = require('./routes/admin/posts');
+var adminProjectsRouter = require('./routes/admin/projects');
+var adminTestimonialsRouter = require('./routes/admin/testimonials');
 
 var app = express();
 
@@ -25,10 +27,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use('/public', express.static(path.resolve('./public'))); // Complemento para os arquivos estáticos....
+app.use('/public', express.static(path.resolve('public'))); // Complemento para os arquivos estáticos....
 
 // Configuação das rotas... é usados quanto tem multiplos arquivos de rotas...
 app.use('/', indexRouter);
+app.use('/admin/posts', adminPostsRouter);
+app.use('/admin/projects', adminProjectsRouter);
+app.use('/admin/testimonials',adminTestimonialsRouter);
 app.use('/users', usersRouter);
 app.use('/testimonials', testimonialsRouter);
 

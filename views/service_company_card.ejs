@@ -1,0 +1,12 @@
+<div class="card" style="width: 18rem;">
+    <img src="<%= `/images/${services_company.image}` %>" class="card-img-top" alt="Services Company">
+    <div class="card-body">
+      <h5 class="card-title text-center">
+        <%= services_company.name %>
+      </h5>
+      <p class="card-text text-justify">
+        <%= services_company.service_description%>
+      </p>
+      <a href="/services_company/<%= service_company.id %>" class="btn btn-primary">Ler mais</a>
+    </div>
+</div>

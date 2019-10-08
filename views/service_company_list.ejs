@@ -1,0 +1,14 @@
+<li class="list-group-item  rounded">
+    <a href="/services_company/<%= service_company.id %>">
+        <div class="media"><img src="<%= `/images/${service_company.image}`%>" class="align-self-start mr3 rounded">
+            <div class="media-body ml-2">
+                <h3>
+                    <%= service_company.name %>
+                </h3>
+                <p>
+                    <%= service_company.service_description %>
+                </p>
+            </div>
+        </div>
+    </a>
+</li>

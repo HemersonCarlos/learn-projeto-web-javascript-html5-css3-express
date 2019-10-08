@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Create new posts</title>
+    <%- include('../../imports'); -%>
+  </head>
+  <body>
+  <header>
+    <%- include('../../navbar'); -%>
+  </header>
+
+  <div class = "container">
+      <div class="row">
+        <div class="col-md-12">
+            <h1>New Post</h1>
+        </div>   
+      </div>
+
+      <div class="col-md-12">
+        <form action="create" method="POST" >
+          <div class="form-row">
+            <div class="col-md-12 mb-3">
+              <label for="postTitle">Title</label>
+              <input name="title" type="text" class="form-control is-valid" id="postTitle" placeholder="Post title" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="col-md-12 mb-3">
+              <label for="postImage">Image</label>
+              <input name="image" type="text" class="form-control is-valid" id="postImage" placeholder="Post image" required>
+            </div>
+          </div>
+    
+          <div class="form-row">
+            <div class="col-md-12 mb-3">
+              <label for="postDescription">Description</label>
+              <textarea name="description" type="text" class="form-control is-valid" id="postDescription" placeholder="Post description" required></textarea>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="col-md-12 mb-3">
+              <label for="postBody">Post body</label>
+              <textarea name="body" type="text" class="form-control is-valid" id="postBody" placeholder="Post body" required></textarea>
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input is-invalid" type="checkbox" id="invalidCheck3" required>
+              <label class="form-check-label" for="invalidCheck3">
+                Agree to terms and conditions
+              </label>
+            </div>
+          </div>
+          <button class="btn btn-dark btn-outline-info" type="submit">Save the post</button>
+        </form>
+      </div>
+  </div>
+
+    <footer>
+        <%- include('../../footer'); -%>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <%- include('imports'); -%>
+    <link rel="shortcut icon" href="../public/images/linguagem_icon.png">
+  </head>
+  <body>
+    <header>
+      <%- include('navbar'); -%>
+    </header>
+
+    <div class="container">
+    
+        <h1 class="my-3">Company Services List</h1>
+
+        <ul class="list-group list-group-flush">
+
+            <% services_company.forEach((service_company) => { %>
+                <%- include('service_company_list', { service_company: service_company }); -%>
+            <% }); %>
+            
+        </ul>
+    </div>
+    
+    <footer>
+        <%- include('footer'); -%>
+    </footer>
+  </body>
+</html>

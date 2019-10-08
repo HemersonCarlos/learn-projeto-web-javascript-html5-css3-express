@@ -2,21 +2,25 @@ var express = require('express');
 var router = express.Router();
 var postsService = require('../services/postsService');
 var projectsService = require('../services/projectsService'); // Como se fosse o include do JavaScript...
+var companyServices = require('../services/companyService');
 
 /* GET home page. */
 router.get('/', function(req, res, next) // Rotas da aplicação web... configuração das rotas e respostas ao chamado da navegação web...
 {
   var posts = postsService.getPosts();
   var projects = projectsService.getProjects();
+  var services_company = companyServices.getCompanyServices();
     
-  res.render('index', {title: 'Blog', posts: posts, projects: projects }); // Passa Arquivo de view e recheia com os outros dados...
+  res.render('index', {title: 'Blog', posts: posts, projects: projects, services_company: services_company}); // Passa Arquivo de view e recheia com os outros dados...
 });
+
+//-----------------------------------------------------------------------------------------------
 
 router.get('/posts', function(req, res, next)
 {
   var posts = postsService.getPosts();
 
-  res.render('posts', {title: 'Blog', posts: posts});
+  res.render('posts', {title: 'Languages', posts: posts});
 });
 
 router.get('/posts/:postId', function(req, res, next)
@@ -39,8 +43,9 @@ router.get('/posts/:postId', function(req, res, next)
 
   res.render('post', {title: post.title, post: post});
 
-
 });
+
+//--------------------------------------------------------------------------------------------
 
 router.get('/projects', function(req, res, next)
 {
@@ -58,6 +63,27 @@ router.get('/project/:projectId', function(req, res, next)
   var project = projects.filter((project) => project.id == projectId)[0];
 
   res.render('project', { title: project.title, project: project });
+});
+
+//-----------------------------------------------------------------------------------------------
+
+router.get('/services_company', function(req, res, next) {
+  var services_company = companyServices.getCompanyServices();
+
+  res.render('services_companys', { title: 'Serviços da companhia', services_company: services_company });
+});
+
+
+router.get('/services_company/:service_companyId', function(req, res, next){
+
+  var service_companyId = req.params.service_companyId;
+
+  var services_company = companyServices.getCompanyServices();
+
+  var service_company = services_company.filter((service_company) => service_company.id == service_companyId)[0];
+
+  res.render('service_company', { title: service_company.name, service_company: service_company });
+
 });
 
 module.exports = router;
