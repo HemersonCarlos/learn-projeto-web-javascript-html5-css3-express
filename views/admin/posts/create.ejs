@@ -17,7 +17,7 @@
       </div>
 
       <div class="col-md-12">
-        <form action="create" method="POST" >
+        <form action="create" method="POST" enctype="multipart/form-data">
           <div class="form-row">
             <div class="col-md-12 mb-3">
               <label for="postTitle">Title</label>
@@ -28,7 +28,7 @@
           <div class="form-row">
             <div class="col-md-12 mb-3">
               <label for="postImage">Image</label>
-              <input name="image" type="text" class="form-control is-valid" id="postImage" placeholder="Post image" required>
+              <input name="image" type="file" class="form-control is-valid" id="postImage" placeholder="Post image" required>
             </div>
           </div>
     

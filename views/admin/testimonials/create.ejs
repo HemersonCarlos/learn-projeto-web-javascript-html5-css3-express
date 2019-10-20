@@ -18,7 +18,7 @@
         </div>
 
         <div class="col-md-12">
-          <form action = "create" method="POST" >
+          <form action = "create" method="POST" enctype="multipart/form-data">
             <div class="form-row">
               <div class="col-md-12 mb-3">
                 <label for="testimonialsName">Name</label>
@@ -29,7 +29,7 @@
             <div class="form-row">
               <div class="col-md-12 mb-3">
                 <label for="testimonialsImage">Image</label>
-                <input name="image" type="text" class="form-control is-valid" id="testimonialsImage" placeholder="Insert your image" required>
+                <input name="image" type="file" class="form-control is-valid" id="testimonialsImage" placeholder="Insert your image" required>
               </div>
             </div>
       
