@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <%- include('imports'); -%>
+    <link rel="shortcut icon" href="../public/images/linguagem_icon.png">
+  </head>
+  <body>
+    <header>
+      <%- include('navbar'); -%>
+    </header>
+
+        <div class="container">
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-6">
+              <form class="form-signin" method="POST" action="login">
+                <div class="text-center mb-4">
+                  <img class="mb-4" src="/public/images/segurity.png" alt="" width="72" height="72">
+                  <h1 class="h3 mb-3 font-weight-normal">Login</h1>
+                </div>
+      
+                <% if (msg) { %>
+                  <div class="alert alert-danger" role="alert">
+                      <%= msg %>
+                  </div>
+                <% } %>
+      
+                <div class="form-label-group" style="margin-top: 25px;">
+                  <label for="inputEmail">Email</label>
+                  <input type="email" name="email" id="inputEmail" class="form-control" placeholder="EX: admin@admin.com" required autofocus>
+                </div>
+      
+                <div class="form-label-group" style="margin-top: 25px;">
+                  <label for="inputPassword">Password</label>
+                  <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                </div>
+      
+                <button class="btn btn-lg btn-primary btn-block mb-4" style="margin-top: 25px;" type="submit">Entrar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+    <footer>
+        <%- include('footer'); -%>
+    </footer>
+  </body>
+</html>

@@ -12,37 +12,44 @@
   <div class="navbar-nav-scroll">
     <ul class="navbar-nav bd-navbar-nav flex-row">
       <li class="nav-item">
-        <a class="nav-link active" href="/"
-          onclick="ga('send', 'event', 'Navbar', 'Community links', 'Segurity');">Home</a>
+        <a class="nav-link active" href="/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Segurity');">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="/posts"
-          onclick="ga('send', 'event', 'Navbar', 'Community links', 'Languages');">Languages</a>
+        <a class="nav-link active" href="/posts" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Languages');">Languages</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active " href="/projects"
-          onclick="ga('send', 'event', 'Navbar', 'Community links', 'Framework');">Framework</a>
+        <a class="nav-link active " href="/projects" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Framework');">Framework</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="/testimonials"
-          onclick="ga('send', 'event', 'Navbar', 'Community links', 'Career');">Career</a>
+        <a class="nav-link active" href="/testimonials" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Career');">Career</a>
       </li>
+
       <li class="nav-item">
-        <a class="nav-link active" href="/services_company"
-          onclick="ga('send', 'event', 'Navbar', 'Community links', 'Company Services');">Company Services</a>
+        <a class="nav-link active" href="/services_company" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Company Services');">Company Services</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link active" href="/admin/posts"
-          onclick="ga('send', 'event', 'Navbar', 'Community links', 'Adm posts');">Adm posts</a>
+
+      <li class="nav-item dropdown">
+          <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Administration
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/admin/posts" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Adm posts');">Posts</a>
+            <a class="dropdown-item" href="/admin/projects" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Adm projects');">Projects</a>
+            <a class="dropdown-item" href="/admin/testimonials" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Adm testimonials');">Testimonials</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link active" href="/admin/projects"
-          onclick="ga('send', 'event', 'Navbar', 'Community links', 'Adm projects');">Adm projects</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active" href="/admin/testimonials"
-          onclick="ga('send', 'event', 'Navbar', 'Community links', 'Adm testimonials');">Adm testimonials</a>
-      </li>
+
+      <% if (locals.loggedUser) { %>
+        <ul class="navbar-nav" style="margin-left: 480px;" >
+            <li class="nav-item active dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <%= locals.loggedUser.email %>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="/auth/logout">Exit</a>
+                </div>
+            </li>
+        </ul>
+      <% } %> 
     </ul>
   </div>
 </header>
