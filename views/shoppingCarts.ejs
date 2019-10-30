@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <%- include('imports'); -%>
+    <link rel="shortcut icon" href="../public/images/linguagem_icon.png">
+  </head>
+  <body>
+    <header>
+      <%- include('navbar'); -%>
+    </header>
+
+    <div class="container">
+    
+        <h1 class="my-3">Shopping list</h1>
+
+        <ul class="list-group list-group-flush">
+
+          <% carts.forEach(( cart ) => { %>
+            <%- include('shoppingCart_list', { cart: cart } ); -%>
+          <% }); %>
+            
+        </ul>
+    </div>
+  
+    <footer>
+        <%- include('footer'); -%>
+    </footer>
+  </body>
+</html>
