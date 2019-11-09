@@ -1,8 +1,11 @@
 body
 {
-    background: url(../images/body.jpg);
+    background:  rgb(0, 0, 0, 0.50);
+    background-image: url(../images/body.jpg);
     background-position: center center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-repeat: no-repeat;
+    background-size: auto;
 }
 header
 {
