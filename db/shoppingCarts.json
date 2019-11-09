@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Curso HTML",
+        "description": "Curso Completo de HTML",
+        "price": 100.00,
+        "image": "curso1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Curso JavaScript",
+        "description": "Curso Completo de JavaScript",
+        "price": 200.00,
+        "image": "curso2.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Curso Linguagem de programação",
+        "description": "Curso Completo de C",
+        "price": 300.00,
+        "image": "curso2.jpg"
+    }
+]

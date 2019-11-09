@@ -1,0 +1,23 @@
+<li class="list-group-item  rounded">
+    <a href="/shoppingCart/<%= cart.id %>">
+        <div class="media"><img src="<%= `/images/${cart.image}`%>" class="align-self-start mr3 rounded">
+            <div class="media-body ml-2">
+                <h3>
+                    <%= cart.name %>
+                </h3>
+
+                <p>
+                    <%= cart.description %>
+                </p>
+
+                <p>
+                    <%= cart.price %>
+                </p>
+
+            </div>
+        </div>
+    </a>
+    <div>
+        <a href="#" class="btn btn-primary">Add to cart</a>
+    </div>
+</li>

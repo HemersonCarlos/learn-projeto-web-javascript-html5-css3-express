@@ -1,4 +1,4 @@
-##Server Side Class - Repository
+## Server Side Class - Repository
 
 This is a repository only for Server Side Programming class activities. If you want to run this project, clone to your local machine and follow these steps:
 
@@ -14,9 +14,11 @@ This is a repository only for Server Side Programming class activities. If you w
 
 After this, go check it out on http://localhost:3000
 
-##To access the administration of posts, projects or testimonials
+## To access the administration of posts, projects or testimonials
 
 Use
 
 **->** Login -> admin@admin.com
+
+
 **->** password -> admin@123

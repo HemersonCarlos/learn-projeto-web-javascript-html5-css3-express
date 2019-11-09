@@ -1,0 +1,12 @@
+<div class="card" style="width: 18rem;">
+    <img src="<%= `/images/${cart.image}` %>" class="card-img-top" alt="Shopping Cart">
+    <div class="card-body">
+        <h5 class="card-title text-center">
+        <%= cart.name %>
+        </h5>
+        <p class="card-text text-justify">
+        <%= cart.description %>
+        </p>
+        <a href="/shoppingCart/<%= cart.id %>" class="btn btn-primary">Purchase</a>
+    </div>
+</div>
